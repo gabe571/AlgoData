@@ -1,2 +1,4 @@
-# npm
-A JavaScript project
+#ALGODATA
+
+
+Practicing Algorithms/Data Structures 
