@@ -1,19 +1,18 @@
-//trie autocomplete search
-const fruits = ['Apple', 'Orange', 'Mango', 'Watermelon', 'Kiwi', 'Banana', 'Grapes'];
+const words = ['Great', 'Tea', 'Ten', 'Teddy', 'Movie', 'Moon'];
+
  
+document.getElementById('search').addEventListener('input', (e) => {
  
-document.getElementById('search').addEventListener('input', (e)=> {
- 
-    let fruitsArray = [];
+    let wordsArray = [];
 
     if(e.target.value){
-        fruitsArray = fruits.filter(fruit => fruit.toLowerCase().includes(e.target.value))
-        fruitsArray = fruitsArray.map(fruit => `${fruit}`)
+        wordsArray = words.filter(word => word.toLowerCase().includes(e.target.value))
+        wordsArray = wordsArray.map(word => `<br>${word}<br>`)
     }
 
-    showFruitsArray(fruitsArray);
+    showWordsArray(wordsArray);
 }); 
-function showFruitsArray(fruitsArray){
-    const html = !fruitsArray.length ? '' : fruitsArray.join('')
+function showWordsArray(wordsArray){
+    const html = !wordsArray.length ? '' : wordsArray.join('')
     document.querySelector('ul').innerHTML = html
 }
